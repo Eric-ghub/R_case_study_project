@@ -1,0 +1,29 @@
+---
+title: "Case_study_note"
+author: "Osazemen Eric Ogbeide"
+date: "2022-10-01"
+output: html_document
+---
+## About project
+Use knowledge from Google Data Analytics courses to answer business question:a high-tech company, Bellabeat, that manufactures health-focused smart products wants to analyze smart device usage data in order to gain insight into how consumers are already using their smart devices.
+
+## Ask
+### Keystakeholder:
+Urška Sršen: Bellabeat’s cofounder and Chief Creative Officer
+
+Sando Mur: Mathematician and Bellabeat’s cofounder
+
+Bellabeat marketing analytics team.
+
+### Business task:
+1. What are some trends in smart device usage?
+2. How could these trends apply to Bellabeat customers?
+3. How could these trends help influence Bellabeat marketing strategy?
+
+## Prepare
+The data is public data from FitBit Fitness Tracker Data. It's a dataset from thirty fitbit users that includes minute-level output for physical activity, heart rate, and sleep monitoring. It's a good database segmented in several tables with different aspects of the data of the device with lots of details about the user behaviour.
+
+### Install packages needed
+
+
+
