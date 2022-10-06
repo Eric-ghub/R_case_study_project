@@ -5,7 +5,7 @@ date: "2022-10-01"
 output: html_document
 ---
 ## About project
-Use knowledge from Google Data Analytics courses to answer business question:a high-tech company, Bellabeat, that manufactures health-focused smart products wants to analyze smart device usage data in order to gain insight into how consumers are already using their smart devices.
+Answer business question: a high-tech company, Bellabeat, that manufactures health-focused smart products wants to analyze smart device usage data in order to gain insight into how non-Bellabeat consumers are already using their smart devices.
 
 ## 1) Ask
 ### Keystakeholder:
@@ -27,6 +27,7 @@ The data is public data from FitBit Fitness Tracker Data <https://www.kaggle.com
 ```{r}
 library(tidyverse)
 library(dplyr)
+library(lubridate)
 ```
 ### Load CSV files into seperate dataframe
 ```{r}
@@ -54,8 +55,16 @@ colnames(daily_intensities)
 colnames(daily_steps)
 colnames(sleep_day)
 ```
+### change date format
+```{r}
+daily_activity$ActivityDate <- mdy(daily_activity$ActivityDate)
+daily_calories$ActivityDay <- mdy(daily_calories$ActivityDay)
+daily_intensities$ActivityDay <- mdy(daily_intensities$ActivityDay)
+daily_steps$ActivityDay <- mdy(daily_steps$ActivityDay)
+```
+
 ### Summary: some initial findings
-a)The dataframe 'daily_calories', 'daily_intensities', and 'daily_steps', all have duplicate datasets which are contained in the 'daily_activvity' dataframe.
+a)The dataframe 'daily_calories', 'daily_intensities', and 'daily_steps', all have duplicate datasets which are contained in the 'daily_activity' dataframe.
 
 b)The 'sleep_day' dataframe only has the 'Id' column as the duplicate dataset.
 
@@ -122,6 +131,7 @@ daily_data <- merge(data_1, sleep_day, by="Id", all=TRUE)%>%
 str(daily_data)
 head(daily_data)
 tail(daily_data)
+View(daily_data)
 ```
 ## Share findings
 ```{r}
