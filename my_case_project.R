@@ -21,16 +21,19 @@ str(daily_intensities)
 str(daily_steps)
 str(sleep_day)
 
-#Verify column names of each dataframe
+#Verify column names of our dataframe
+
+colnames(daily_activity)
+colnames(daily_calories)
+colnames(daily_intensities)
+colnames(daily_steps)
+colnames(sleep_day)
 
 head(daily_activity)
-colnames(daily_activity)
 head(daily_calories)
 head(daily_intensities)
-colnames(daily_intensities)
 head(daily_steps)
 head(sleep_day)
-colnames(sleep_day)
 
 #check number of distinct values in each datafrme
 
@@ -81,8 +84,9 @@ summary(daily_data)
 nrow(daily_data)
 n_distinct(daily_data)
 
-ggplot(data=daily_data, aes(x=SedentaryMinutes, y=Calories)) + geom_smooth()
+ggplot(data=daily_data, aes(x=SedentaryMinutes, y=Calories)) + geom_point()
 ggplot(data=daily_data, aes(x=VeryActiveMinutes, y=Calories))+geom_point()
 ggplot(data=daily_data, aes(x=LightlyActiveMinutes, y=Calories))+geom_smooth()
 ggplot(daily_data) + geom_bar(aes(y = SedentaryMinutes))
 
+View(daily_data)

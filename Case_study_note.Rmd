@@ -129,8 +129,3 @@ ggplot(data=daily_data, aes(x=SedentaryMinutes, y=Calories)) + geom_point()
 ggplot(data=daily_data, aes(x=VeryActiveMinutes, y=Calories))+geom_point()
 ggplot(data=daily_data, aes(x=LightlyActiveMinutes, y=Calories))+geom_point()
 ```
-
-
-
-
-
